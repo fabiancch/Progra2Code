@@ -509,7 +509,8 @@ def pprincipal():
                   "5. Manejar la tripulación de un vuelo""\n"
                   "6. Asignar un Avión a una Ruta""\n"
                   "7. Vender tiquetes""\n"
-                  "8. Cierra el programa""\n")
+                  "8. Crear Informacion""\n"
+                  "9. Cierra el programa""\n")
     if choice not in ["1","2","3","4","5","6","7","8"]:
         print("El numero que ingresó no se encuentra entre los que se solicitó")
         pprincipal()
@@ -536,7 +537,9 @@ def pprincipal():
         pag7()
 
     elif choice == '8':
-        sis.exit()
+        pag8()
+    else:
+        sys.exit()
 #---------------------------------------------------------------------------------------------------------------Funciones del funcionario 1#
 def pag1():
     jojo = 0
@@ -551,7 +554,7 @@ def pag1():
                     "6. Volver a la pagina principal""\n"
                     "7. Cerrar programa" "\n")
         if ch1 not in ["1","2","3","4","5","6","7"]:
-            print("El numero que ingresó no se encuentra entre los que se solicitó")
+            print("El numero que ingresó no se encuentra entre los que se solicitó""\n")
         else:
             jojo = 1
 #---------------------------------------------------------------------------------------------------------------#
@@ -1059,6 +1062,23 @@ def pag7():#venta de tiquetes#
         pag7()
     else:
         pag1()
+#---------------------------------------------------------------------------------------------------------------Funciones del funcionario 8#
+def pag8():
+    jojo = 0
+    ch1 = 0
+    while jojo == 0:
+        ch1 = input("Digite el numero que corresponde a la acción que desea hacer: \n"
+                    "1. Crear aviones" "\n"
+                    "2. Crear rutas" "\n"
+                    "3. Crear vuelos""\n"
+                    "4. Crear Clientes""\n"
+                    "5. Crear Asignaciones de vuelos""\n"
+                    "6. Volver a la pagina principal""\n"
+                    "7. Cerrar programa" "\n")
+        if ch1 not in ["1","2","3","4","5","6","7"]:
+            print("El numero que ingresó no se encuentra entre los que se solicitó")
+        else:
+            jojo = 1    
 #-----------------------------------------------------------------------------------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------------------------------------#
 #######################################################Funciones Usuario Principal###########################################################
